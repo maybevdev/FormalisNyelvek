@@ -7,12 +7,14 @@
 // Add your own problems here
 #include "problems/sum.hpp"
 #include "problems/dfa.hpp"
+#include "problems/det.hpp"
 
 int runProblem(int argc, char* argv[]) {
     // Add your own problems here
     std::vector<Problem *> problems;
     problems.push_back(new SumProblem());
     problems.push_back(new DfaProblem());
+    problems.push_back(new DetProblem());
 
     cxxopts::Options options("project", "Run the specific problem");
 
