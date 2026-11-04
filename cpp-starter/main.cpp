@@ -8,6 +8,7 @@
 #include "problems/sum.hpp"
 #include "problems/dfa.hpp"
 #include "problems/det.hpp"
+#include "problems/minimize.hpp"
 
 int runProblem(int argc, char* argv[]) {
     // Add your own problems here
@@ -15,6 +16,7 @@ int runProblem(int argc, char* argv[]) {
     problems.push_back(new SumProblem());
     problems.push_back(new DfaProblem());
     problems.push_back(new DetProblem());
+    problems.push_back(new MinimizeProblem());
 
     cxxopts::Options options("project", "Run the specific problem");
 
