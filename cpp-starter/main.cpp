@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 
+
 #include "cxxopts.hpp"
 
 // Add your own problems here
@@ -9,6 +10,7 @@
 #include "problems/dfa.hpp"
 #include "problems/det.hpp"
 #include "problems/minimize.hpp"
+#include "problems/regexes.hpp"
 
 int runProblem(int argc, char* argv[]) {
     // Add your own problems here
@@ -17,6 +19,7 @@ int runProblem(int argc, char* argv[]) {
     problems.push_back(new DfaProblem());
     problems.push_back(new DetProblem());
     problems.push_back(new MinimizeProblem());
+    problems.push_back(new RegexProblem());
 
     cxxopts::Options options("project", "Run the specific problem");
 
