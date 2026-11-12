@@ -56,8 +56,8 @@ std::vector<std::string> RegexProblem::countMatchingLines() const {
         std::regex(HEAD + "E "),
         // warnings sent by PackageManager
         std::regex(HEAD + "W PackageManager *:"),
-        // debug lines from ExoPlayer (ExoPlayer is in the tag)
-        std::regex(HEAD + "D [^:]*ExoPlayer"),
+        // debug lines with ExoPlayer anywhere in them
+        std::regex(HEAD + "D .*ExoPlayer"),
         // errors and warnings with a java file position, e.g. "HashMap.java:500"
         std::regex(HEAD + "[EW] .*\\.java:[0-9]+"),
         // "Thread" in the message: the tag ends at the first ':', so we only look after it
